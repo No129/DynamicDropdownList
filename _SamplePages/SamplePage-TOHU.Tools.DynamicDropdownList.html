@@ -7,12 +7,12 @@
 
 
     $(window).load(function(){
-        new TOHU.Tools.DynamicDropdownList('OU', 'distribution').Initial();      
+        new TOHU.Tools.DynamicDropdownList('OU', 'district').Initial();      
     });
     
     //顯示選取郵遞區號。
     function ShowSelectedPostNo(){
-        $('#SelectedPostNo').text($('#distribution').val());
+        $('#SelectedPostNo').text($('#district').val());
     }            
 </script>
     <title>DynamicDropdownList Sample Page</title>
@@ -31,7 +31,7 @@
                 鄉鎮市區:
             </td>
             <td>
-                <select id="distribution"  style="width: 100px;" onchange="ShowSelectedPostNo()">
+                <select id="district"  style="width: 100px;" onchange="ShowSelectedPostNo()">
                     <option value="KLC|200|仁愛區">仁愛區</option>
                     <option value="KLC|201|信義區">信義區</option>
                     <option value="KLC|202|中正區">中正區</option>
