@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "SharePoint_Tools_DynamicDropdownList",
+            "url": "file:///C:/_TOHU/SharePoint/DynamicDropdownList/_SamplePages/TOHU.Tools.DynamicDropdownList.html",
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "UT-SharePoint_Tools_DynamicDropdownList",
+            "url": "file:///C:/_TOHU/SharePoint/DynamicDropdownList/_UnitTest/UT-TOHU.Tools.DynamicDropDownList.html",
+            "webRoot": "${workspaceRoot}"
+        }      
+    ]
+    
+}

@@ -1,0 +1,62 @@
+<hand>
+    <meta charset="UTF-8">    
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="TOHU.Utility.js" ></script>
+<script src="TOHU.Tools.DynamicDropdownList.js" ></script>      
+<script type="text/javascript">
+
+
+    $(window).load(function(){
+        new TOHU.Tools.DynamicDropdownList('OU', 'distribution').Initial();      
+    });
+    
+    //顯示選取郵遞區號。
+    function ShowSelectedPostNo(){
+        $('#SelectedPostNo').text($('#distribution').val());
+    }            
+</script>
+    <title>DynamicDropdownList Sample Page</title>
+</hand>
+<body> 
+    <table >       
+        <tr>
+            <td>縣市:</td>  
+            <td>
+                <select id="city" style="width: 100px;">
+                    <option value="KLC">基隆市</option>
+                    <option value="TPC">臺北市</option>                    
+                </select>
+            </td>              
+            <td>
+                鄉鎮市區:
+            </td>
+            <td>
+                <select id="distribution"  style="width: 100px;" onchange="ShowSelectedPostNo()">
+                    <option value="KLC|200|仁愛區">仁愛區</option>
+                    <option value="KLC|201|信義區">信義區</option>
+                    <option value="KLC|202|中正區">中正區</option>
+                    <option value="KLC|203|中山區">中山區</option>
+                    <option value="KLC|204|安樂區">安樂區</option>
+                    <option value="KLC|205|暖暖區">暖暖區</option>
+                    <option value="KLC|206|七堵區">七堵區</option>
+                    <option value="TPC|100|中正區">中正區</option>
+                    <option value="TPC|103|大同區">大同區</option>
+                    <option value="TPC|104|中山區">中山區</option>
+                    <option value="TPC|105|松山區">松山區</option>
+                    <option value="TPC|106|大安區">大安區</option>
+                    <option value="TPC|108|萬華區">萬華區</option>
+                    <option value="TPC|110|信義區">信義區</option>
+                    <option value="TPC|111|士林區">士林區</option>
+                    <option value="TPC|112|北投區">北投區</option>
+                    <option value="TPC|114|內湖區">內湖區</option>
+                    <option value="TPC|115|南港區">南港區</option>
+                    <option value="TPC|116|文山區">文山區</option>                    
+                </select> 
+            </td>
+            <td>郵遞區號：</td>
+            <td>
+                <label id="SelectedPostNo" />
+            </td>                                   
+        </tr>                   
+    </table>
+</body>

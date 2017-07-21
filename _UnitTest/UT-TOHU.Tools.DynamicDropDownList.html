@@ -1,0 +1,47 @@
+<hand>    	
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="../_Code/TOHU.Utility.js" ></script>
+<script type="text/javascript" src="../_Code/TOHU.Tools.DynamicDropdownList.js" ></script>
+<script type="text/javascript" src="../_UnitTest/TOHU.UnitTest.Utility.js" ></script>
+<script type="text/javascript" src="../_UnitTest/TOHU.UnitTest.Tools.js" ></script>
+<script type="text/javascript" src="../_UnitTest/TOHU.UnitTest.DynamicDropdownList.js" ></script>
+<script type="text/javascript">    
+    $(document).ready(function(){
+        new TOHU.UnitTest.Tools.ScenarioEngine(
+            new TOHU.UnitTest.DynamicDropdownList.BeforProcess())
+                .AddScenario(new TOHU.UnitTest.DynamicDropdownList.Scenario_Initial("BU", "GTS"))
+                .AddScenario(new TOHU.UnitTest.DynamicDropdownList.Scenario_Initial("OU", "GTS1"))
+                .RunScenario();
+
+        new TOHU.UnitTest.Tools.ScenarioEngine(
+            new TOHU.UnitTest.DynamicDropdownList.BeforProcess())
+                .AddScenario(new TOHU.UnitTest.DynamicDropdownList.Scenario_Selected_GA("OU", "GAS"))
+                .RunScenario();
+     });
+</script>
+
+<title>DynamicDropdownList Sample Page</title>
+</hand>
+<body> 
+    <table >       
+        <tr>
+            <td width="30px">BU:</td>  
+            <td>
+                <select id="BU" style="width: 100px;" />
+            </td>              
+            <td>
+                OU:
+            </td>
+            <td>
+                <select id="OU"  style="width: 100px;" />
+            </td>        
+            <td>
+                Staff:
+            </td>
+            <td>
+                <select id="Staff"  style="width: 100px;" />
+            </td>        
+        </tr>
+    </table>     
+</body>
