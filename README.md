@@ -24,8 +24,10 @@
 
 新建 TOHU.Tools.DynamicDropdownList 類別，並傳入主要及從屬下拉選單的 id 值，然後呼叫 Initial 方法就完成了。
 
-``` 
+```
+
 **多階主從選單時如何設定？**
 
 如果有多階主從選單則可以透過 SetRelation 函式逐階設定即可。
+
 ```
